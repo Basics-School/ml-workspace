@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Na/K &le; -0.186<br/>gini = 0.668<br/>samples = 100<br/>value = [7, 8, 9, 27, 49]<br/>class = drugY>, fillcolor="#f7c3ec"] ;
+1 [label=<BP_encoded &le; 1.5<br/>gini = 0.645<br/>samples = 51<br/>value = [7, 8, 9, 27, 0]<br/>class = drugX>, fillcolor="#abaaf4"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<BP_encoded &le; 0.5<br/>gini = 0.375<br/>samples = 36<br/>value = [0, 0, 9, 27, 0]<br/>class = drugX>, fillcolor="#7d7bee"] ;
+1 -> 2 ;
+3 [label=<Cholesterol_encoded &le; 0.5<br/>gini = 0.5<br/>samples = 18<br/>value = [0, 0, 9, 9, 0]<br/>class = drugC>, fillcolor="#ffffff"] ;
+2 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 9<br/>value = [0, 0, 0, 9, 0]<br/>class = drugX>, fillcolor="#3c39e5"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 9<br/>value = [0, 0, 9, 0, 0]<br/>class = drugC>, fillcolor="#39e5c5"] ;
+3 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 18<br/>value = [0, 0, 0, 18, 0]<br/>class = drugX>, fillcolor="#3c39e5"] ;
+2 -> 6 ;
+7 [label=<Age &le; 0.302<br/>gini = 0.498<br/>samples = 15<br/>value = [7, 8, 0, 0, 0]<br/>class = drugB>, fillcolor="#eefce6"] ;
+1 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 7<br/>value = [7, 0, 0, 0, 0]<br/>class = drugA>, fillcolor="#e58139"] ;
+7 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 8<br/>value = [0, 8, 0, 0, 0]<br/>class = drugB>, fillcolor="#7be539"] ;
+7 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 49<br/>value = [0, 0, 0, 0, 49]<br/>class = drugY>, fillcolor="#e539c0"] ;
+0 -> 10 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
